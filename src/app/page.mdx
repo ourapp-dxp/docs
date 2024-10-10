@@ -1,0 +1,37 @@
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Documentation | ourapp.studio',
+  description:
+    'Create and customize apps, build pages and forms, and start selling products in minutes—all with seamless integration.',
+}
+
+export const sections = [
+  { title: 'Guides', id: 'guides' },
+  { title: 'Resources', id: 'resources' },
+]
+
+<HeroPattern />
+
+# ourapp.studio
+
+Create and customize apps, build pages and forms, and start selling products in minutes—all with seamless integration. {{ className: 'lead' }}
+
+<div className="not-prose mb-16 mt-6 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    <>Quickstart</>
+  </Button>
+  <Button href="/sdks" variant="outline">
+    <>Explore</>
+  </Button>
+</div>
+
+## Getting started {{ anchor: false }}
+
+To get started, create a new application in your [dashboard](/dashboard), registration is free however products sold due incur [seller fee's](/fees). {{ className: 'lead' }}
+
+<Guides />
+
+<Resources />
