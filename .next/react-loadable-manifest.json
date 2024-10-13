@@ -1,8 +1,8 @@
 {
   "components/Search.tsx -> @/mdx/search.mjs": {
-    "id": 8854,
+    "id": "components/Search.tsx -> @/mdx/search.mjs",
     "files": [
-      "static/chunks/854.36b33f5f52b981ba.js"
+      "static/chunks/_app-pages-browser_src_mdx_search_mjs.js"
     ]
   }
 }

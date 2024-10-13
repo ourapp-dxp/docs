@@ -85,13 +85,15 @@ function SocialLink({
   href,
   icon: Icon,
   children,
+  target,
 }: {
   href: string
   icon: React.ComponentType<{ className?: string }>
-  children: React.ReactNode
+  children: React.ReactNode,
+  target: string
 }) {
   return (
-    <Link href={href} className="group">
+    <Link href={href} className="group" target={target}>
       <span className="sr-only">{children}</span>
       <Icon className="h-5 w-5 fill-zinc-700 transition group-hover:fill-zinc-900 dark:group-hover:fill-zinc-500" />
     </Link>
@@ -105,7 +107,7 @@ function SmallPrint() {
         &copy; ourapp.studio {new Date().getFullYear()}. All rights reserved.
       </p>
       <div className="flex gap-4">
-        <SocialLink href="#" icon={GitHubIcon}>
+        <SocialLink href="https://github.com/ourapp-dxp/docs" target="_blank" icon={GitHubIcon}>
           Follow us on GitHub
         </SocialLink>
       </div>

@@ -17,21 +17,27 @@ export const sections = [
 
 # ourapp.studio
 
-Create and customize apps, build pages and forms, and start selling products in minutes—all with seamless integration. {{ className: 'lead' }}
+Create and customize apps, build pages and forms, and start selling products in minutes all with a seamless integration into your business. {{ className: 'lead' }}
 
 <div className="not-prose mb-16 mt-6 flex gap-3">
   <Button href="/quickstart" arrow="right">
     <>Quickstart</>
   </Button>
-  <Button href="/sdks" variant="outline">
+  {/*<Button href="/sdks" variant="outline">
     <>Explore</>
-  </Button>
+  </Button>*/}
 </div>
 
 ## Getting started {{ anchor: false }}
 
-To get started, create a new application in your [dashboard](/dashboard), registration is free however products sold due incur [seller fee's](/fees). {{ className: 'lead' }}
+To get started, create a new application in your [dashboard](/dashboard). Registration is free, but products sold will incur [seller fees](/products#fees). {{ className: 'lead' }}
 
-<Guides />
+<div className="not-prose">
+  <Button href="/products" variant="text" arrow="right">
+    <>Explore products</>
+  </Button>
+</div>
+
+{/*<Guides />*/}
 
 <Resources />

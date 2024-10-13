@@ -239,7 +239,10 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'Resources',
     links: [
-      { title: 'Messages', href: '/messages' },
+      { title: 'Apps', href: '/apps' },
+      { title: 'Products', href: '/products' },
+      { title: 'Forms', href: '/forms' },
+      { title: 'Pages', href: '/pages' },
     ],
   },
 ]
@@ -248,9 +251,7 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul role="list">
-        <TopLevelNavItem href="/">API</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="#">Support</TopLevelNavItem>
+        <TopLevelNavItem href="/">Documentation</TopLevelNavItem>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
@@ -258,10 +259,18 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
             className={groupIndex === 0 ? 'md:mt-0' : ''}
           />
         ))}
+        {/* External Sign In Button */}
         <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
-          <Button href="#" variant="filled" className="w-full">
-            Sign in
-          </Button>
+          <a
+            href="https://ourapp.io" // Replace with your external domain URL
+            target="_blank" // Optional: opens the link in a new tab
+            rel="noopener noreferrer" // Security best practice for external links
+            className="block w-full"
+          >
+            <Button variant="filled" className="w-full">
+              Sign in
+            </Button>
+          </a>
         </li>
       </ul>
     </nav>
