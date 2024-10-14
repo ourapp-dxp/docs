@@ -23,8 +23,8 @@ const nextConfig = {
   },
   // New settings for GitHub Pages
   output: 'export',
-  assetPrefix: process.env.GITHUB_PAGES ? '/<repository-name>/' : '',
-  basePath: process.env.GITHUB_PAGES ? '/<repository-name>' : '',
+  assetPrefix: process.env.GITHUB_PAGES ? '/docs/' : '',
+  basePath: process.env.GITHUB_PAGES ? '/docs' : '',
   images: {
     unoptimized: true, // Disable next/image optimization as GitHub Pages doesn't support it
   },
