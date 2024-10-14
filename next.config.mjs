@@ -21,6 +21,13 @@ const nextConfig = {
       '/**/*': ['./src/app/**/*.mdx'],
     },
   },
+  // New settings for GitHub Pages
+  output: 'export',
+  assetPrefix: process.env.GITHUB_PAGES ? '/<repository-name>/' : '',
+  basePath: process.env.GITHUB_PAGES ? '/<repository-name>' : '',
+  images: {
+    unoptimized: true, // Disable next/image optimization as GitHub Pages doesn't support it
+  },
 }
 
 export default withSearch(withMDX(nextConfig))

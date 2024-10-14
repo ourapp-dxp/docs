@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "next build && next export && touch out/.nojekyll && git add out && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix out origin gh-pages"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -50,6 +52,7 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "gh-pages": "^6.2.0",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sharp": "0.33.1"
