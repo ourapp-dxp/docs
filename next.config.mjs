@@ -21,11 +21,8 @@ const nextConfig = {
       '/**/*': ['./src/app/**/*.mdx'],
     },
   },
-  // New settings for GitHub Pages
   output: 'export',
-  distDir: 'docs',
-  assetPrefix: process.env.GITHUB_PAGES ? '/docs/' : '',
-  basePath: process.env.GITHUB_PAGES ? '/docs' : '',
+  distDir: 'out',  // Changed from 'docs' to 'out'
   images: {
     unoptimized: true, // Disable next/image optimization as GitHub Pages doesn't support it
   },
