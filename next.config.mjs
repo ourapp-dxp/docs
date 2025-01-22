@@ -26,6 +26,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable next/image optimization as GitHub Pages doesn't support it
   },
+  basePath: '/docs',
+  assetPrefix: '/docs/',
 }
 
 export default withSearch(withMDX(nextConfig))

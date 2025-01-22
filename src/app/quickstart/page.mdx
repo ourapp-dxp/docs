@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import appsImage from '@/images/apps.png'
+import paymentsImage from '@/images/payments.png'
 import { Resources } from '@/components/Resources'
 
 export const metadata = {
@@ -16,10 +17,6 @@ This guide will get you all set up and ready to use ourapp.studio. We’ll cover
   Before you can make an app in ourapp.studio, you will need to register an account. [You can register for free here](https://ourapp.io/register).
 </Note>
 
-## Dashboard
-
-Before making your first API request, you need to pick which API client you will use. In addition to good ol' cURL HTTP requests, Protocol offers clients for JavaScript, Python, and PHP. In the following example, you can see how to install each client.
-
 {/*<div className="not-prose">
   <Button href="/sdks" variant="text" arrow="right">
     <>Check out our list of first-party SDKs</>
@@ -28,7 +25,7 @@ Before making your first API request, you need to pick which API client you will
 
 ## Create your first app
 
-After picking your preferred client, you are ready to make your first call to the Protocol API. Below, you can see how to send a GET request to the Conversations endpoint to get a list of all your conversations. In the cURL example, results are limited to ten conversations, the default page length for each client.
+After registering or signing in, you'll be automatically directed to the dashboard. This is where you can create new apps, edit or delete existing apps.
 
 <Image
   src={appsImage}
@@ -40,12 +37,28 @@ After picking your preferred client, you are ready to make your first call to th
 
 ## Listing your first product
 
-After picking your preferred client, you are ready to make your first call to the Protocol API. Below, you can see how to send a GET request to the Conversations endpoint to get a list of all your conversations. In the cURL example, results are limited to ten conversations, the default page length for each client.
+After registering or signing in, you'll need to accept our standard payment processing terms before being able to upgrade to a verified merchant account. 
+
+<Image
+  src={paymentsImage}
+  alt=""
+  width={800}    
+  height={500}
+  unoptimized
+/>
+
+{/* Replace with example step up form */}
+<Image
+  src={paymentsImage}
+  alt=""
+  width={800}    
+  height={500}
+  unoptimized
+/>
 
 ## Connecting products and assets to your app
 
 After picking your preferred client, you are ready to make your first call to the Protocol API. Below, you can see how to send a GET request to the Conversations endpoint to get a list of all your conversations. In the cURL example, results are limited to ten conversations, the default page length for each client.
-
 
 ## What's next?
 
