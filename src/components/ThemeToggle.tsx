@@ -28,14 +28,24 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true)
-  }, [])
+    const storedTheme = localStorage.getItem('shared-theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, [setTheme])
+
+  const toggleTheme = () => {
+    const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('shared-theme', newTheme);
+  };
 
   return (
     <button
       type="button"
       className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : 'Toggle theme'}
-      onClick={() => setTheme(otherTheme)}
+      onClick={toggleTheme}
     >
       <SunIcon className="h-5 w-5 stroke-zinc-900 dark:hidden" />
       <MoonIcon className="hidden h-5 w-5 stroke-white dark:block" />
