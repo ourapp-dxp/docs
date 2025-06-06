@@ -28,7 +28,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true)
-    const storedTheme = localStorage.getItem('shared-theme');
+    const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
       setTheme(storedTheme);
     }
@@ -37,7 +37,7 @@ export function ThemeToggle() {
   const toggleTheme = () => {
     const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    localStorage.setItem('shared-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   return (

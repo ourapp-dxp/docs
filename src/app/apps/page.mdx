@@ -6,7 +6,8 @@ export const metadata = {
 
 # Apps
 
-'Apps' allow you to create interconnected journeys for your users, using a variety of assets owned by your ourapp organization.
+An 'App' or application in ourapp.studio is an entry point for your users. Apps can be interconnected to create a deeper journey. 
+
 On this page, we'll dive into the different configuration options you can set in your app. We'll look at how to setup your app for your first sale, add a product menu, a business form and even interconnect seperate apps under the same organization - to create a rich app experience.{{ className: 'lead' }}
 
 ## The message model
@@ -297,105 +298,6 @@ The message model contains all the information about the messages and attachment
 
   </Col>
 </Row>
-
----
-
-## Update a message {{ tag: 'PUT', label: '/v1/messages/:id' }}
-
-<Row>
-  <Col>
-
-    This endpoint allows you to perform an update on a message. Examples of updates are adding a reaction, editing the message, or adding an attachment.
-
-    ### Optional attributes
-
-    <Properties>
-      <Property name="message" type="string">
-        The message content.
-      </Property>
-      <Property name="reactions" type="array">
-        An array of reaction objects associated with the message.
-      </Property>
-      <Property name="attachments" type="array">
-        An array of attachment objects associated with the message.
-      </Property>
-    </Properties>
-
-  </Col>
-  <Col sticky>
-
-    <CodeGroup title="Request" tag="PUT" label="/v1/messages/SIuAFUNKdSYHZF2w">
-
-    ```bash {{ title: 'cURL' }}
-    curl -X PUT https://api.protocol.chat/v1/messages/SIuAFUNKdSYHZF2w \
-      -H "Authorization: Bearer {token}" \
-      -d reactions[red_angry_face][]="KateMcCallister"
-    ```
-
-    ```js
-    import ApiClient from '@example/protocol-api'
-
-    const client = new ApiClient(token)
-
-    await client.messages.update('SIuAFUNKdSYHZF2w', {
-        reactions: {
-            red_angry_face: ['KateMcCallister']
-        }
-    })
-    ```
-
-    ```python
-    from protocol_api import ApiClient
-
-    client = ApiClient(token)
-
-    client.messages.update("SIuAFUNKdSYHZF2w",
-        reactions={"red_angry_face": ["KateMcCallister"]})
-    ```
-
-    ```php
-    $client = new \Protocol\ApiClient($token);
-
-    $client->messages->update('SIuAFUNKdSYHZF2w', [
-      'reactions' => [
-        'red_angry_face' => ['KateMcCallister'],
-      ],
-    ]);
-    ```
-
-    </CodeGroup>
-
-    ```json {{ title: 'Response' }}
-    {
-      "id": "SIuAFUNKdSYHZF2w",
-      "conversation_id": "xgQQXg3hrtjh7AvZ",
-      "contact": {
-        "id": "WAz8eIbvDR60rouK",
-        "username": "KevinMcCallister",
-        "phone_number": "1-800-759-3000",
-        "avatar_url": "https://assets.protocol.chat/avatars/buzzboy.jpg",
-        "last_active_at": 705103200,
-        "created_at": 692233200
-      },
-      "message": "I'm not apologizing. I'd rather kiss a toilet seat.",
-      "reactions": [
-        {
-          "red_angry_face": [
-            "KateMcCallister"
-          ]
-        }
-      ],
-      "attachments": [],
-      "read_at": 705103200,
-      "created_at": 692233200,
-      "updated_at": 692233200
-    }
-    ```
-
-  </Col>
-</Row>
-
----
 
 ## Delete a message {{ tag: 'DELETE', label: '/v1/messages/:id' }}
 
